@@ -8,12 +8,11 @@
    - ### Background Information
    - ### Data Summary
    - ### Goal
-   - ### Libraries to Import
    - ### Data Exploration/Data Wrangling
-   - ### Pandas Profiling Package
-   - ### Feature Selection
-   - ### Model Buiding/Tuning
-   - ### Conclusions
+   - ### Feature Engineering and Model Preparation
+   - ### Logistic Model 
+   - ### Conclusions and Recommendations
+   - ### References 
 
 
 
@@ -76,144 +75,13 @@ Figure 4
 
 
 
+When displayed in a correlogram, one can visualize minimal correlation amongst the original 49 dataset features.
 
-- ### Correlation matrix
+Figure 5: Correlogram 
 
+<img src="notebook_images/Correlogram.png" width="400" align="center"/>
 
-```python
-# Basic correlogram demonstrates minimal correlation among the dataset features
-corr = hcc_data_filled.corr()
-corr.style.background_gradient(cmap='coolwarm')
-```
-
-
-
-
-
-**Summmary of 49 features:**
-
-Gender                       (1=Male;0=Female)	
-
-Symptoms                     (1=Yes;0=No)
-
-Alcohol	                     (1=Yes;0=No)
-
-Hepatitis B Surface Antigen	 (1=Yes;0=No)
-
-Hepatitis B e Antigen        (1=Yes;0=No)
-
-Hepatitis B Core Antibody    (1=Yes;0=No)
-
-Hepatitis C Virus Antibody	 (1=Yes;0=No)
-
-Cirrhosis                    (1=Yes;0=No)
-
-Endemic Countries	         (1=Yes;0=No)
-
-Smoking                      (1=Yes;0=No)
-
-Diabetes	                 (1=Yes;0=No)
-
-Obesity                      (1=Yes;0=No)
-
-Hemochromatosis              (1=Yes;0=No)
-
-Arterial Hypertension        (1=Yes;0=No)
-
-Chronic Renal Insufficiency	 (1=Yes;0=No)
-
-Human Immunodeficiency Virus (1=Yes;0=No)
-
-Nonalcoholic Steatohepatitis	(1=Yes;0=No)
-
-Esophageal Varices				(1=Yes;0=No)
-
-Splenomegaly					(1=Yes;0=No)
-
-Portal Hypertension			    (1=Yes;0=No)	
-
-Portal Vein Thrombosis			(1=Yes;0=No)	
-
-Liver Metastasis				(1=Yes;0=No)	
-
-Radiological Hallmark			(1=Yes;0=No)	
-
-Age at diagnosis				20-93				
-
-Grams of Alcohol per day		Grams/day	
-
-Packs of cigarets per year		Packs/year		
-
-Performance Status*			    [0,1,2,3,4,5]	
-
-Encephalopathy degree*			[1,2,3]			
-
-Ascites degree*				    [1,2,3]			
-
-International Normalised Ratio*	0.84-4.82		
-
-Alpha-Fetoprotein (ng/mL)		AFP			
-
-Haemoglobin (g/dL)				
-
-Mean Corpuscular Volume	 (fl)	MCV
-
-Leukocytes(G/L)					
-
-Platelets	(G/L)				
-
-Albumin (mg/dL)				
-
-Total Bilirubin(mg/dL)			
-
-Alanine transaminase (U/L)		ALT
-
-Aspartate transaminase (U/L)	AST				
-
-Gamma glutamyl transferase (U/L)GGT			
-
-Alkaline phosphatase (U/L)		ALP				
-
-Total Proteins (g/dL)			TP				
-
-Creatinine (mg/dL)				
-
-Number of Nodules				0-5			
-
-Major dimension of nodule (cm)	
-
-Direct Bilirubin (mg/dL)		
-
-Iron	(mcg/dL)					
-
-Oxygen Saturation (%)			
-
-Ferritin (ng/mL)				
-
-Class Attribute	
-
-
-### Pandas Profiling Package
-
-
-
-```python
-hcc_data_filled.profile_report(style={'full_width':True})
-```
-
-
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    <ipython-input-17-845668a29a00> in <module>
-    ----> 1 hcc_data_filled.profile_report(style={'full_width':True})
-    
-
-    NameError: name 'hcc_data_filled' is not defined
-
-
-## Feature Selection/Engineering
+## Feature Engineering and Model Preparation
    
 
 - ### Creating MELD (Model for End-Stage Liver Disease) Score Feature
@@ -232,7 +100,7 @@ Created a FIB-4 Index score for each patient.  It is a noninvasive estimate of l
 
 <img src="images/fib_4_index.png" width="400">
 
-## Model Buiding/Tuning
+
 
 - ### Base Model
 Running a base logistic model in which Null values have been replaced with 0's and no additional model tuning or parameter optimization has occurred.
@@ -333,7 +201,7 @@ print('Testing F1-Score: ',f1_score(y_hat_test_0,y_test_0))
     Testing F1-Score:  0.9777777777777777
 
 
-## Tuning Model
+
 
 - ### **Utilizing KNN imputed data for missing values**
 
@@ -462,7 +330,7 @@ print("After OverSampling, counts of label '0': {}".format(sum(y_train_res==0)))
     After OverSampling, counts of label '0': 83
 
 
-## Final Logistic Model 
+## Logistic Model 
 
 
 
