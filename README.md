@@ -22,11 +22,11 @@
 
 One out of every six deaths that occur in the world are due to cancer.  Cancer is second only to cardiovascular disease in all-cause mortality globally. Liver cancer (hepatocellular carcinoma) is consistently ranked as one of the most common forms of cancer (Figure 1) and is one of the most lethal, with a 5-year survival rate of about 15% in the USA (Figure 2).  
 
-Figure 1
+Figure 1: Global Cancer Types
 ### <img src="images/cancer_death_by_type.png" width="800" align="center"/>
 
 
-Figure 2
+Figure 2: Liver Cancer (Hepatocelluar carcinoma) Survival Rates
 ### <img src="images/five_year_survival_rate_liver_cancer.png" width="800" align="center"/>
 
 
@@ -41,7 +41,7 @@ This logistic regression model would prove most useful to clinicians, patients, 
 
 
 
-## Data Summary:
+## Data Summary
 
 This hepatocellular carcinoma dataset consists of patient-data from 165 former patients of Hospital and University Centre of Coimbra (Portugal). The dataset contains 49 features selected according to the EASL-EORTC (European Association for the Study of the Liver - European Organization for Research and Treatment of Cancer) Clinical Practice Guidelines.  The target variable, "Class", is the survival of each patient at 1 year and is represented as 0 (deceased) and 1 (alive).
 
@@ -64,21 +64,25 @@ When exploring the distribution of the target variable "Class", a degree of clas
 
 
 
-Figure 3
+Figure 3: Class Imbalance A
 
 ### <img src="notebook_images/logistic_regression_hepatocellular_carcinoma_one_year_survival_23_1.png" width="400" align="center"/>
 
 
-Figure 4
+
+
+Figure 4: Class Imbalance B
 ### <img src="notebook_images/logistic_regression_hepatocellular_carcinoma_one_year_survival_24_0.png" width="400" align="center"/>
 
 
 
 When displayed in a correlogram, one can visualize minimal correlation amongst the original 49 dataset features.
 
-Figure 5: Correlogram of a subset of features
+Figure 5: Correlogram (select subset of features)
 
-<img src="notebook_images/Correlogram.png" width="400" align="center"/>
+<img src="notebook_images/Correlogram.png" width="600" align="center"/>
+
+
 
 
 
@@ -98,6 +102,7 @@ Figure 6: Model for End-Stage Liver Disease Score (MELD)
 
 
 
+
 Figure 7: Fibrosis-4 (FIB-4) Index for Liver Fibrosis Feature
 
 
@@ -112,6 +117,8 @@ In order to address the class imbalance (greater number of living patients at 1 
 
 
 Finally, a grid search was utilized to optimize parameters and assign most appropriate penalty weights prior to running the logistic model.  
+
+
 
 
 ## Logistic Model Results
@@ -147,6 +154,7 @@ Testing F1-Score:  0.9333333333333332
 
 
 
+
 Figure 8: Confusion Matrix
 
 <img src="notebook_images/logistic_regression_hepatocellular_carcinoma_one_year_survival_71_0.png" width="400">
@@ -157,13 +165,16 @@ Figure 8: Confusion Matrix
 
 Figure 9: Logistic Regression Decision Boundary Graph
 
-<img src="notebook_images/logistic_regression_hepatocellular_carcinoma_one_year_survival_74_1.png" width="400">
+<img src="notebook_images/logistic_regression_hepatocellular_carcinoma_one_year_survival_74_1.png" width="600">
+
+
 
 
 
 Figure 10: Area Under the Curve (AUC) Graph
 
-<img src="notebook_images/logistic_regression_hepatocellular_carcinoma_one_year_survival_76_1.png" width="400">
+<img src="notebook_images/logistic_regression_hepatocellular_carcinoma_one_year_survival_76_1.png" width="600">
+
 
 
 
@@ -179,6 +190,7 @@ The logistic regression model returned an accuracy of 82%, an AUC of 83%, and a 
 By providing a convenient HCC diagnostic tool, this model can serve as a supplement in patient decision making.  By combining machine learning’s ability to analyze large datasets in minimal time with decision makers’ context knowledge, more robust and efficient clinical decisions can be made earlier in the disease lifecycle.
 
 Areas of future work include training predictive models on larger patient datasets—a task easier said than done in the realm of healthcare.  Furthermore, applying these models to other disease classification scenarios has the potential to positively impact how decision makers approach diagnoses and optimal treatment options.  The concept of utilizing clustering techniques to fill in missing data for patients may prove promising for future healthcare models that aim to preserve patient profile heterogeneity.
+
 
 
 
