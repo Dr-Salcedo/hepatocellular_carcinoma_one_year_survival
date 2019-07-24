@@ -34,6 +34,7 @@ Figure 2
 The majority of liver cancer cases are detected at advanced stages of disease, when treatment options are severely limited in both quantity and effectiveness.  With this in mind, more effective screening and earlier cancer detection has the most potential to save lives and reduce disease cost burden. A better understanding of hepatocellular carcinoma and its risk factors is necessary for more effective screening, early recognition, and optimal treatment.
 
 
+
 ## Data Summary:
 
 This hepatocellular carcinoma dataset consists of patient-data from 165 former patients of Hospital and University Centre of Coimbra (Portugal). The dataset contains 49 features selected according to the EASL-EORTC (European Association for the Study of the Liver - European Organization for Research and Treatment of Cancer) Clinical Practice Guidelines.  The target variable, "Class", is the survival of each patient at 1 year and is represented as 0 (deceased) and 1 (alive).
@@ -42,6 +43,7 @@ Many of the features for which patient data was collected are important risk fac
 
 
 ### <img src="images/feature_summary_table.png" width="800" align="center"/>
+
 
 
  ## Goal
@@ -53,44 +55,21 @@ This logistic regression model would prove most useful to clinicians, patients, 
 
 
 
-
-
 ## Data Exploration/Data Wrangling
 
+Prior to any data modification, the dataset's percent of missing values was determined to be 10%. 
+
+When exploring the distribution of the target variable "Class", a degree of class imbalance between living patients (1) and deceased patients (0) at the one year mark was observed.
 
 
-
-
-
-- ### Explore distribution of target: Alive or Dead at 1 Year Mark
-
-
-```python
-"""Note degree of class imbalance; 
-Class Distribution: 2 classes: 63 patients labeled as “dies” (0) 102 patients labeled as “lives” (1)"""
-sns.kdeplot(raw_hcc_data["Class"])
-```
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x11e61a3d0>
-
-
+63 patients were labeled as deceased (0) and 102 patients were labeled as alive (1).
 
 
 ![png](logistic_regression_hepatocellular_carcinoma_one_year_survival_files/logistic_regression_hepatocellular_carcinoma_one_year_survival_23_1.png)
 
 
-
-```python
-##target class distribution
-sns.countplot(x='Class',data=hcc_data_filled, palette='hls')
-plt.show()
-```
-
-
 ![png](logistic_regression_hepatocellular_carcinoma_one_year_survival_files/logistic_regression_hepatocellular_carcinoma_one_year_survival_24_0.png)
+
 
 
 
