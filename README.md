@@ -6,6 +6,7 @@
 
 ## Outline
    - ### Background Information
+   - ### Data Summary
    - ### Goal
    - ### Libraries to Import
    - ### Data Exploration/Data Wrangling
@@ -20,19 +21,36 @@
 ## Background Information
 
 
-One out of every six deaths that occur in the world are due to cancer.  Cancer is second only to cardiovascular disease in all-cause mortality globally. Liver cancer (hepatocellular carcinoma) is consistently ranked as one of the most common forms of cancer and is one of the most lethal, with a 5-year survival rate of about 15% in the USA.  The majority of liver cancer cases are detected at advanced stages of disease, when treatment options are severely limited in both quantity and effectiveness.  With this in mind, more effective screening and earlier cancer detection has the most potential to save lives and reduce disease cost burden. A better understanding of hepatocellular carcinoma and its risk factors is necessary for more effective screening, early recognition, and optimal treatment.
+One out of every six deaths that occur in the world are due to cancer.  Cancer is second only to cardiovascular disease in all-cause mortality globally. Liver cancer (hepatocellular carcinoma) is consistently ranked as one of the most common forms of cancer (Figure 1) and is one of the most lethal, with a 5-year survival rate of about 15% in the USA (Figure 2).  
+
+
+### <img src="images/cancer_death_by_type" width="400">
+Figure 1
+
+
+### <img src="images/five_year_survival_rate_liver_cancer" width="400">
+Figure 2
+
+The majority of liver cancer cases are detected at advanced stages of disease, when treatment options are severely limited in both quantity and effectiveness.  With this in mind, more effective screening and earlier cancer detection has the most potential to save lives and reduce disease cost burden. A better understanding of hepatocellular carcinoma and its risk factors is necessary for more effective screening, early recognition, and optimal treatment.
+
 
 ## Data Summary:
+
 This hepatocellular carcinoma dataset consists of patient-data from 165 former patients of Hospital and University Centre of Coimbra (Portugal). The dataset contains 49 features selected according to the EASL-EORTC (European Association for the Study of the Liver - European Organization for Research and Treatment of Cancer) Clinical Practice Guidelines.  The target variable, "Class", is the survival of each patient at 1 year and is represented as 0 (deceased) and 1 (alive).
+
+Many of the features for which patient data was collected are important risk factors for the development of HCC.  In the table below some of the key features included in the model are detailed.
+
+
+### <img src="images/feature_summary_table.png" width="400">
+
 
  ## Goal
 
 The purpose of this model, in predicting whether a patient diagnosed with hepatocellular carcinoma will survive past one year in conjunction with established guidelines, has the potential to reduce mortality rate.
 
-This model would prove most useful to clinicians, patients, and policy makers alike—as they grapple with the cancer decision making process and potential treatment options.  Ideally, machine learning and statistical models will find a place in depicting a completer and more holistic patient profile. 
+This logistic regression model would prove most useful to clinicians, patients, and policy makers alike—as they grapple with the cancer decision making process and potential treatment options.  Ideally, machine learning and statistical models will find a place in depicting a completer and more holistic predictive patient profile. 
 
 
-## Libraries to Import
 
 
 
@@ -41,146 +59,6 @@ This model would prove most useful to clinicians, patients, and policy makers al
 
 
 
-```python
-###preview data
-raw_hcc_data=pd.read_csv("hcc_data.csv")
-raw_hcc_data.head()
-```
-
-
-
-
-```python
-## create dummy variables for gender
-raw_hcc_data = pd.concat([raw_hcc_data,pd.get_dummies(raw_hcc_data['Gender'], prefix='male',dummy_na=False)],axis=1).drop(['Gender'],axis=1)
-```
-
-
-```python
-raw_hcc_data.head()
-```
-
-
-
-
-
-
-```python
-#examine dataset shape
-raw_hcc_data.shape
-
-```
-
-
-
-
-    (165, 51)
-
-
-
-
-```python
-raw_hcc_data.describe()
-```
-
-
-
-
-
-```python
-# replace all "?" in the dataset with 0
-zeroed_hcc_data=raw_hcc_data.replace("?", 0)
-```
-
-
-```python
-zeroed_hcc_data.head()
-```
-
-
-
-
-
-
-```python
-##checking to make sure there are no remaining Nan's/Null values
-zeroed_hcc_data.isnull().sum().head()
-```
-
-
-
-
-    Symptoms    0
-    Alcohol     0
-    HBsAg       0
-    HBeAg       0
-    HBcAb       0
-    dtype: int64
-
-
-
-
-```python
-#examine all features in dataset
-#49 original features
-zeroed_hcc_data.count()
-```
-
-
-
-
-    Symptoms          165
-    Alcohol           165
-    HBsAg             165
-    HBeAg             165
-    HBcAb             165
-    HCVAb             165
-    Cirrhosis         165
-    Endemic           165
-    Smoking           165
-    Diabetes          165
-    Obesity           165
-    Hemochro          165
-    AHT               165
-    CRI               165
-    HIV               165
-    NASH              165
-    Varices           165
-    Spleno            165
-    PHT               165
-    PVT               165
-    Metastasis        165
-    Hallmark          165
-    Age               165
-    Grams_day         165
-    Packs_year        165
-    PS                165
-    Encephalopathy    165
-    Ascites           165
-    INR               165
-    AFP               165
-    Hemoglobin        165
-    MCV               165
-    Leucocytes        165
-    Platelets         165
-    Albumin           165
-    Total_Bil         165
-    ALT               165
-    AST               165
-    GGT               165
-    ALP               165
-    TP                165
-    Creatinine        165
-    Nodule            165
-    Major_Dim         165
-    Dir_Bil           165
-    Iron              165
-    Sat               165
-    Ferritin          165
-    Class             165
-    male_0            165
-    male_1            165
-    dtype: int64
 
 
 
