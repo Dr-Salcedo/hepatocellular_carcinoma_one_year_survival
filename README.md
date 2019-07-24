@@ -59,35 +59,21 @@ This logistic regression model would prove most useful to clinicians, patients, 
 
 Prior to any data modification, the dataset's percent of missing values was determined to be 10%. 
 
-When exploring the distribution of the target variable "Class", a degree of class imbalance between living patients (1) and deceased patients (0) at the one year mark was observed.
+When exploring the distribution of the target variable "Class", a degree of class imbalance between living patients (1) and deceased patients (0) at the one year mark was observed (Figure 3 and Figure 4).
 
 
 63 patients were labeled as deceased (0) and 102 patients were labeled as living (1).
 
 
-sns.kdeplot(raw_hcc_data["Class"])
-```
+
+Figure 3
+
+### <img src="notebook_images/logistic_regression_hepatocellular_carcinoma_one_year_survival_23_1.png" width="800" align="center"/>
 
 
+Figure 4
+### <img src="notebook_images/logistic_regression_hepatocellular_carcinoma_one_year_survival_24_0.png" width="800" align="center"/>
 
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x11e61a3d0>
-
-
-
-
-![png](logistic_regression_hepatocellular_carcinoma_one_year_survival_files/logistic_regression_hepatocellular_carcinoma_one_year_survival_23_1.png)
-
-
-
-```python
-##target class distribution
-sns.countplot(x='Class',data=hcc_data_filled, palette='hls')
-plt.show()
-```
-
-
-![png](logistic_regression_hepatocellular_carcinoma_one_year_survival_files/logistic_regression_hepatocellular_carcinoma_one_year_survival_24_0.png)
 
 
 
