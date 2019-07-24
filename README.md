@@ -62,14 +62,32 @@ Prior to any data modification, the dataset's percent of missing values was dete
 When exploring the distribution of the target variable "Class", a degree of class imbalance between living patients (1) and deceased patients (0) at the one year mark was observed.
 
 
-63 patients were labeled as deceased (0) and 102 patients were labeled as alive (1).
+63 patients were labeled as deceased (0) and 102 patients were labeled as living (1).
+
+
+sns.kdeplot(raw_hcc_data["Class"])
+```
+
+
+
+
+    <matplotlib.axes._subplots.AxesSubplot at 0x11e61a3d0>
+
+
 
 
 ![png](logistic_regression_hepatocellular_carcinoma_one_year_survival_files/logistic_regression_hepatocellular_carcinoma_one_year_survival_23_1.png)
 
 
-![png](logistic_regression_hepatocellular_carcinoma_one_year_survival_files/logistic_regression_hepatocellular_carcinoma_one_year_survival_24_0.png)
 
+```python
+##target class distribution
+sns.countplot(x='Class',data=hcc_data_filled, palette='hls')
+plt.show()
+```
+
+
+![png](logistic_regression_hepatocellular_carcinoma_one_year_survival_files/logistic_regression_hepatocellular_carcinoma_one_year_survival_24_0.png)
 
 
 
