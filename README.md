@@ -68,7 +68,7 @@ When exploring the distribution of the target variable "Class", a degree of clas
 
 Figure 3
 
-### <img src="notebook_images/logistic_regression_hepatocellular_carcinoma_one_year_survival_23_1.png" width="400 align="center"/>
+### <img src="notebook_images/logistic_regression_hepatocellular_carcinoma_one_year_survival_23_1.png" width="400" align="center"/>
 
 
 Figure 4
