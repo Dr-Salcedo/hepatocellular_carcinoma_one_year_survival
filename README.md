@@ -86,9 +86,9 @@ Figure 5: Correlogram of a subset of features
    
 Prior to running the logistic model, gender was bitwo additional features were created.  The first a widely used clinical scoring method to predict 3 month mortality rates in patients with end-stage liver disease--the Model for End-Stage Liver Disease Score (MELD). It stratifies severity of end-stage liver disease for transplant planning.  The second feature created was a Fibrosis-4 Index (FIB-4) score. The FIB-4 Index score is a noninvasive estimate of liver scarring in HCV and HBV patients.  Together these 2 features contributed an approximate 3% improvement to the model's overall predictive ability.
 
-Model for End-Stage Liver Disease Score (MELD)
+Figure 6: Model for End-Stage Liver Disease Score (MELD)
 
-Figure 6
+
 <img src="images/meld_score.png" width="800">
 
     
@@ -98,9 +98,9 @@ Figure 6
 
 
 
-Fibrosis-4 (FIB-4) Index for Liver Fibrosis Feature
+Figure 7: Fibrosis-4 (FIB-4) Index for Liver Fibrosis Feature
 
-Figure 7
+
 <img src="images/fib_4_index.png" width="400">
 
     
@@ -135,14 +135,7 @@ Training F1-Score:  1.0
 Testing F1-Score:  0.9333333333333332
 
 
-
-Figure 8: Confusion Matrix
-
-<img src="notebook_images/logistic_regression_hepatocellular_carcinoma_one_year_survival_71_0.png" width="400">
-
-
-
-- ### Confusion Matrix Chart
+### Confusion Matrix Chart
 
             prediction                        
                    0       1                         
@@ -150,6 +143,14 @@ Figure 8: Confusion Matrix
                0 | TN   |  FP               
          actual   -----   -----             
                1 | FN   |  TP   
+
+
+
+
+Figure 8: Confusion Matrix
+
+<img src="notebook_images/logistic_regression_hepatocellular_carcinoma_one_year_survival_71_0.png" width="400">
+
 
 
 
