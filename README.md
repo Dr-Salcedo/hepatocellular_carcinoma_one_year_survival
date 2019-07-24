@@ -23,13 +23,13 @@
 
 One out of every six deaths that occur in the world are due to cancer.  Cancer is second only to cardiovascular disease in all-cause mortality globally. Liver cancer (hepatocellular carcinoma) is consistently ranked as one of the most common forms of cancer (Figure 1) and is one of the most lethal, with a 5-year survival rate of about 15% in the USA (Figure 2).  
 
-
-### <img src="images/cancer_death_by_type.png" width="800" align="center"/>
 Figure 1
+### <img src="images/cancer_death_by_type.png" width="800" align="center"/>
 
 
-### <img src="images/five_year_survival_rate_liver_cancer.png" width="800" align="center"/>
 Figure 2
+### <img src="images/five_year_survival_rate_liver_cancer.png" width="800" align="center"/>
+
 
 The majority of liver cancer cases are detected at advanced stages of disease, when treatment options are severely limited in both quantity and effectiveness.  With this in mind, more effective screening and earlier cancer detection has the most potential to save lives and reduce disease cost burden. A better understanding of hepatocellular carcinoma and its risk factors is necessary for more effective screening, early recognition, and optimal treatment.
 
@@ -68,7 +68,7 @@ When exploring the distribution of the target variable "Class", a degree of clas
 
 Figure 3
 
-### <img src="notebook_images/logistic_regression_hepatocellular_carcinoma_one_year_survival_23_1.png" width="400" align="center"/>
+### <img src="notebook_images/logistic_regression_hepatocellular_carcinoma_one_year_survival_23_1.png" width="400 align="center"/>
 
 
 Figure 4
