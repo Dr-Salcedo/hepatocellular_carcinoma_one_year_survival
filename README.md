@@ -136,7 +136,7 @@ Testing F1-Score:  0.9333333333333332
 
 
 
-Figure 8:Confusion Matrix
+Figure 8: Confusion Matrix
 
 <img src="notebook_images/logistic_regression_hepatocellular_carcinoma_one_year_survival_71_0.png" width="400">
 
@@ -145,24 +145,24 @@ Figure 8:Confusion Matrix
 - ### Confusion Matrix Chart
 
             prediction                        
-               0       1                         
-             -----   -----                      
-          0 | TN   |  FP               
-    actual   -----   -----             
-          1 | FN   |  TP   
+                   0       1                         
+                  -----   -----                      
+               0 | TN   |  FP               
+         actual   -----   -----             
+               1 | FN   |  TP   
 
 
 
 
 Figure 9: Logistic Regression Decision Boundary Graph
 
-<img src="logistic_regression_hepatocellular_carcinoma_one_year_survival_74_1.png" width="400">
+<img src="notebook_images/logistic_regression_hepatocellular_carcinoma_one_year_survival_74_1.png" width="400">
 
 
 
 Figure 10: Area Under the Curve (AUC) Graph
 
-<img src="logistic_regression_hepatocellular_carcinoma_one_year_survival_76_1.png" width="400">
+<img src="notebook_images/logistic_regression_hepatocellular_carcinoma_one_year_survival_76_1.png" width="400">
 
 
 
