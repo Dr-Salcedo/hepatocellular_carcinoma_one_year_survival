@@ -1,7 +1,7 @@
 
 # Predicting One Year Survival of Patients with Hepatocellular Carcinoma: A Logistic Regression Model
 
-### <img src="images/liver_2.png" width="400">
+### <img src="images/liver_2.png" width="600">
 
 
 ## Outline
@@ -17,8 +17,8 @@
 
 
 
-## Background Information
 
+## Background Information
 
 One out of every six deaths that occur in the world are due to cancer.  Cancer is second only to cardiovascular disease in all-cause mortality globally. Liver cancer (hepatocellular carcinoma) is consistently ranked as one of the most common forms of cancer (Figure 1) and is one of the most lethal, with a 5-year survival rate of about 15% in the USA (Figure 2).  
 
@@ -53,6 +53,8 @@ Many of the features for which patient data was collected are important risk fac
 
 
 
+
+
 ## Data Exploration
 
 Prior to any data modification, the dataset's percent of missing values was determined to be 10%. 
@@ -61,6 +63,7 @@ When exploring the distribution of the target variable "Class", a degree of clas
 
 
 63 patients were labeled as deceased (0) and 102 patients were labeled as living (1).
+
 
 
 
@@ -81,6 +84,7 @@ When displayed in a correlogram, one can visualize minimal correlation amongst t
 Figure 5: Correlogram (select subset of features)
 
 <img src="notebook_images/Correlogram.png" width="600" align="center"/>
+
 
 
 
@@ -121,25 +125,17 @@ Finally, a grid search was utilized to optimize parameters and assign most appro
 
 
 
+
+
 ## Logistic Model Results
 
-Training Precision:  1.0
-Testing Precision:  0.9130434782608695
+Testing Precision:  0.7894736842105263
 
+Testing Recall:  0.8823529411764706
 
+Testing Accuracy:  0.8181818181818182
 
-Training Recall:  1.0
-Testing Recall:  0.9545454545454546
-
-
-
-Training Accuracy:  1.0
-Testing Accuracy:  0.9285714285714286
-
-
-
-Training F1-Score:  1.0
-Testing F1-Score:  0.9333333333333332
+Testing F1-Score:  0.8333333333333333
 
 
 ### Confusion Matrix Chart
