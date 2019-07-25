@@ -131,7 +131,7 @@ Finally, a grid search was utilized to optimize parameters and assign most appro
 
 
 
-## Logistic Model Results
+## Logistic Model
 
 Testing Precision:  0.7894736842105263
 
