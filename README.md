@@ -11,7 +11,7 @@
 - [Data Summary](#Data-Summary)
 - [Data Exploration](#Data-Exploration)
 - [Feature Engineering and Model Preparation](#Feature-Engineering-and-Model-Preparation)
-- [Logistic Model Results](#Logistic-Model)
+- [Logistic Model Results](#Logistic-Model-Results)
 - [Conclusions and Recommendations](#Conclusions-and-Recommendations)
 - [References](#References)
 
