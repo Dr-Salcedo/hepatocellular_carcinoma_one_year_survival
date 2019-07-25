@@ -139,6 +139,8 @@ Testing Accuracy:  0.8181818181818182
 
 Testing F1-Score:  0.8333333333333333
 
+False Positive Rate: 0.14
+
 
 ### Confusion Matrix Chart
 
