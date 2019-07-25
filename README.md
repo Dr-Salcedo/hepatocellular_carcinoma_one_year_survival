@@ -4,15 +4,19 @@
 ### <img src="images/liver_2.png" width="600">
 
 
-## Outline
-   - ### Background Information
-   - ### Goal
-   - ### Data Summary
-   - ### Data Exploration
-   - ### Feature Engineering and Model Preparation
-   - ### Logistic Model 
-   - ### Conclusions and Recommendations
-   - ### References 
+## Contents:
+
+- [Background Information](#Background-Information)
+- [Goal](#Goal)
+- [Data Summary](#Data-Summary)
+- [Libraries to Import](#Libraries-to-Import)
+- [Data Exploration](#Data-Exploration)
+- [Pandas Profiling Package](#Pandas-Profiling-Package)
+- [Feature Engineering and Model Preparation](#Feature-Engineering-and-Model-Preparation)
+- [Logistic Model](#Logistic-Model)
+- [Conclusions and Recommendations](#Conclusions-and-Recommendations)
+- [References](#References)
+
 
 
 
