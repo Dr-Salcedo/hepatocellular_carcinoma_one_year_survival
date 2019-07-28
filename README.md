@@ -1,4 +1,4 @@
-
+  
 # Predicting One Year Survival of Patients with Hepatocellular Carcinoma: A Logistic Regression Model
 
 ### <img src="images/liver_2.png" width="600">
@@ -17,7 +17,7 @@
 
 
 
-
+ 
 
 
 ## Background Information
