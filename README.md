@@ -37,13 +37,13 @@ The majority of liver cancer cases are detected at advanced stages of disease, w
 
  ## Goal
 
-The purpose of this model, in predicting whether a patient diagnosed with hepatocellular carcinoma will survive past one year in conjunction with established guidelines, is to reduce mortality rate secondary to hepatocellular carcinoma.
+The purpose of this model is to provide a robust alternative diagnostic model for predicting patient liver cancer mortality beyond stage classification through clustering techniques.
 
 This logistic regression model would prove most useful to clinicians, patients, and policy makers alike—as they grapple with the cancer decision making process and potential treatment options.  Ideally, machine learning and statistical models will find a place in depicting a completer and more holistic predictive patient profile. 
 
 
 
-## Data Summary
+## Data Summary: The Patient "Profile"
 
 This hepatocellular carcinoma dataset consists of patient data from 165 former patients of Hospital and University Centre of Coimbra (Portugal). The dataset contains 49 features selected according to the EASL-EORTC (European Association for the Study of the Liver - European Organization for Research and Treatment of Cancer) Clinical Practice Guidelines.  The target variable, "Class", is the survival of each patient at 1 year and is represented as 0 (deceased) and 1 (alive).
 
@@ -190,9 +190,8 @@ The logistic regression model returned an accuracy of 82%, an AUC of 83%, and a 
 By providing a convenient and quickly accessible HCC diagnostic tool, this model can serve as a supplement in the patient decision making process.  By combining machine learning’s ability to analyze large datasets in minimal time with decision makers’ context knowledge, more robust and efficient clinical decisions can be made earlier in the disease lifecycle resulting in better clinical outcomes. Localized treatment options such as radiofrequency ablation, cryoablation, chemoembolization, and surgical resection are available for patients in earlier disease stages.  Once the disease extends past the liver capsule--these options disappear for the most part and limited systemic approaches with a greater risk and side effect profile have to be implemented (systemic chemotherapy or liver transplant).  
 
 
-Areas of future work include training predictive models on larger patient datasets—a task easier said than done in the realm of healthcare.  Furthermore, applying this model to other disease classification scenarios has the potential to positively impact how decision makers approach diagnoses and optimal treatment options.  The concept of utilizing clustering techniques to fill in missing data for patients may prove promising for future healthcare models that aim to preserve patient profile heterogeneity.
-
-
+Areas of future work include training predictive models on larger patient datasets—a task easier said than done in the realm of healthcare. Furthermore, applying this model to other disease classification scenarios has the potential to positively impact how decision makers approach diagnoses and optimal treatment options. The concept of utilizing clustering techniques to fill in missing data for patients may prove promising for future healthcare models that aim to preserve patient profile heterogeneity.
+By expanding beyond just disease stage classification and utilizing cluster analysis to generate patient groups with similar prognostic features, one may also be able to predict survival patterns and treatment responsiveness on a group basis.
 
 
 ## References
